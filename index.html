@@ -118,7 +118,7 @@
       e.preventDefault();
       status.innerHTML = "⏳ Envoi en cours...";
 
-   
+      emailjs.sendForm("service_h2p156e","template_ntzehgi",this);
       emailjs.sendForm("service_h2p156e", "template_2o5wgoc", this) 
 
         .then(() => {
