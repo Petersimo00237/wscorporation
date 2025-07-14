@@ -2,65 +2,128 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>W.S CORPORATION</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>W.S Corporation - Informatique & Comptabilité</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>W.S CORPORATION</h1>
-      <ul>
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#apropos">À propos</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="banner" id="accueil">
-      <h2>Bienvenue chez W.S CORPORATION</h2>
-      <p>Votre partenaire en innovation numérique.</p>
+
+  <!-- En-tête avec Logo -->
+  <header class="bg-dark text-white text-center p-4">
+    <div class="d-flex justify-content-center align-items-center">
+     
+      <div>
+        <h1 class="h3 m-0">W.S Corporation</h1>
+        <p class="m-0">Informatique & Expertise comptable</p>
+      </div>
     </div>
   </header>
 
-  <section id="services">
-    <h2>Nos Services</h2>
-    <div class="services-container">
-      <div class="service">
-        <h3>Création de site web</h3>
-        <p>Sites vitrines, e-commerce, applications web...</p>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">W.S Corporation</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#devis">Demande de devis</a></li>
+        </ul>
       </div>
-      <div class="service">
-        <h3>Marketing Digital</h3>
-        <p>Stratégies de communication, réseaux sociaux...</p>
-      </div>
-      <div class="service">
-        <h3>Maintenance informatique</h3>
-        <p>Dépannage, installation, optimisation...</p>
-      </div>
+    </div>
+  </nav>
+
+  <!-- Section Services -->
+  <section id="services" class="py-5 container">
+    <h2 class="text-center mb-4">Nos Services</h2>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="card p-3 shadow-sm">✅ Création de site web</div></div>
+      <div class="col-md-4"><div class="card p-3 shadow-sm">✅ Développement d'applications</div></div>
+      <div class="col-md-4"><div class="card p-3 shadow-sm">✅ Maintenance des ordinateurs</div></div>
+      <div class="col-md-4"><div class="card p-3 shadow-sm">✅ Expertise comptable</div></div>
+      <div class="col-md-4"><div class="card p-3 shadow-sm">✅ Marketing digital</div></div>
+      <div class="col-md-4"><div class="card p-3 shadow-sm">✅ Montage graphique</div></div>
     </div>
   </section>
 
-  <section id="apropos">
-    <h2>À propos de nous</h2>
-    <p>Entreprise XYZ est spécialisée dans les solutions digitales sur mesure pour petites et grandes entreprises. Notre mission : propulser votre business dans l’ère numérique.</p>
+  <!-- Contact -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Contactez-nous</h2>
+      <p class="text-center">📞 <a href="tel:+237652439276">+237 652 439 276</a> | 📧 <a href="mailto:w.scorporation237@gmail.com">w.scorporation237@gmail.com</a></p>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Contactez-nous</h2>
-    <form id="contact-form">
-      <input type="text" placeholder="Votre nom" required />
-      <input type="email" placeholder="Votre email" required />
-      <textarea placeholder="Votre message" required></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
-    <p id="form-message"></p>
+  <!-- Formulaire de Devis -->
+  <section id="devis" class="py-5 container">
+   <h4 class="mb-3">💬 Demande de devis / Quote Request</h4>
+
+        <form id="contactForm">
+          <div class="mb-3">
+            <label>Nom / Name</label>
+            <input type="text" name="nom" class="form-control" placeholder="Votre nom / Your name" required>
+          </div>
+          <div class="mb-3">
+            <label>Email</label>
+            <input type="email" name="email" class="form-control" placeholder="ex: exemple@gmail.com" required>
+          </div>
+          <div class="mb-3">
+        <label class="form-label">Service souhaité</label>
+        <select name="service" class="form-select">
+          <option>Création de site web</option>
+          <option>Création d'application</option>
+          <option>Maintenance</option>
+          <option>Expertise comptable</option>
+          <option>Marketing digital</option>
+          <option>Montage graphique</option>
+        </select>
+      </div>
+          <div class="mb-3">
+            <label>Message</label>
+            <textarea name="message" class="form-control" rows="5" placeholder="Décrivez votre besoin / Describe your need" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-success w-100">✅ Envoyer / Send</button>
+        </form>
+
+        <div id="statusMessage" class="text-center mt-3"></div>
+      </div>
+    </div>
+  </div>
+
   </section>
 
-  <footer>
-    <p>&copy; 2025 Entreprise XYZ. Tous droits réservés.</p>
+  <!-- Pied de page -->
+  <footer class="bg-dark text-white text-center py-3">
+    &copy; 2025 W.S Corporation. Tous droits réservés.
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    emailjs.init("J2s66QEp50njy-Mos"); // Remplace par ton vrai USER ID
+
+    const form = document.getElementById("contactForm");
+    const status = document.getElementById("statusMessage");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      status.innerHTML = "⏳ Envoi en cours...";
+
+   
+      emailjs.sendForm("service_h2p156e", "template_2o5wgoc", this) 
+
+        .then(() => {
+          status.innerHTML = "<span class='text-success'>✅ Message envoyé avec succès !<br>Message sent successfully.</span>";
+          form.reset();
+        }, (error) => {
+          status.innerHTML = "<span class='text-danger'>❌ Une erreur est survenue.<br>Error: " + error.text + "</span>";
+        });
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
