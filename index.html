@@ -1,117 +1,338 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>W.S Corporation - Informatique & Comptabilité</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WS Corporation - Accueil</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+   <!-- Navbar Bootstrap -->
+
+
+<!-- Ajouter Font Awesome dans le <head> de votre site -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 <body>
-
-  <!-- En-tête avec Logo -->
-  <header class="bg-dark text-white text-center p-4">
-    <div class="d-flex justify-content-center align-items-center">
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo"> <br> </div>
      
-      <div>
-        <h1 class="h3 m-0">W.S Corporation</h1>
-        <p class="m-0">Informatique & Expertise comptable</p>
+    <span class="menu-toggle">&#9776;</span>
+    <ul>
+      <li><a href="#hero"><i class="fa-solid fa-house"></i>&nbsp; Accueil</a></li>
+      <li><a href="#services"><i class="fa-solid fa-server"></i>&nbsp; Services</a>
+        
+      </li>
+      <li><a href="#apropos"><i class="fa-solid fa-circle-info"></i>&nbsp; À propos</a></li>
+      <li><a href="#contact"><i class="fa-solid fa-headset"></i>&nbsp;  Contact</a></li>
+     
+    </ul>
+  </nav>
+
+  
+
+  <!-- HERO-->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1>Solutions Informatiques <br><span>&amp; Comptables</span></h1>
+      <p>Votre partenaire de confiance pour la transformation digitale et la gestion comptable de votre entreprise</p>
+      <div class="buttons">
+        <a href="#services" class="btn btn-primary">Découvrir nos services</a>
+        <a href="#apropos" class="btn btn-outline">À propos de nous</a>
       </div>
     </div>
-  </header>
+  </section>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">W.S Corporation</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="#devis">Demande de devis</a></li>
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <h2>Une expertise complète en informatique et comptabilité</h2>
+    <p>Nous accompagnons votre entreprise dans sa croissance avec des solutions adaptées et performantes.</p>
+
+    <div class="service-container">
+      <div class="card">
+        <div class="icon"><i class="fa-solid fa-microchip"></i></div>
+        <h3>Solutions Informatiques</h3>
+        <p>Développement d’applications sur mesure, maintenance système et infrastructure IT pour optimiser votre productivité.</p>
+        <ul>
+          <li>Développement web & mobile</li>
+          <li>Infrastructure réseau</li>
+          <li>Maintenance système</li>
+          <li>Sécurité informatique</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="icon"><i class="fa-solid fa-coins"></i></div>
+        <h3>Services Comptables</h3>
+        <p>Gestion comptable complète, déclarations fiscales et conseil financier pour accompagner la croissance de votre entreprise.</p>
+        <ul>
+          <li>Comptabilité général et analystique</li>
+          <li>Vielle Fiscale</li>
+          <li>Montage des business plan , DSF & ASF</li>
+          <li>Gestion financière</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="icon"><i class="fa-brands fa-digital-ocean"></i></div>
+        <h3>Impact Visuel</h3>
+        <p> Nous transformons vos idées en créations percutantes, alliant montage graphique professionnel et marketing digital efficace.</p>
+        <ul>
+          <li>Création & Design Graphique</li>
+          <li>Marketing digital</li>
+          <li>Branding & Stratégie </li>
+          <li>Optimisation & Performance</li>
         </ul>
       </div>
     </div>
-  </nav>
+  </section>
 
-  <!-- Section Services -->
-  <section id="services" class="py-5 container">
-    <h2 class="text-center mb-4">Nos Services</h2>
-    <div class="row g-4">
-      <div class="col-md-4"><div class="card p-3 shadow-sm">✅ Création de site web</div></div>
-      <div class="col-md-4"><div class="card p-3 shadow-sm">✅ Développement d'applications</div></div>
-      <div class="col-md-4"><div class="card p-3 shadow-sm">✅ Maintenance des ordinateurs</div></div>
-      <div class="col-md-4"><div class="card p-3 shadow-sm">✅ Expertise comptable</div></div>
-      <div class="col-md-4"><div class="card p-3 shadow-sm">✅ Marketing digital</div></div>
-      <div class="col-md-4"><div class="card p-3 shadow-sm">✅ Montage graphique</div></div>
+  <!-- A PROPOS -->
+  <section id="apropos" class="about">
+    <div class="bubble">
+      <img src="logows2.png" alt="Équipe WS Corporation" class="logows2">
+    </div>
+
+    <div class="about-text">
+      <h2>À Propos de Nous</h2>
+      <p>
+        Forts de plus de 10 ans d’expérience, notre entreprise combine expertise informatique et comptable pour offrir des solutions complètes et innovantes.  
+        Nous accompagnons les entreprises dans leur transformation digitale et leur gestion comptable en mettant en avant rigueur et efficacité.
+      </p>
+
+      <div class="stats">
+        <div class="stat">
+          <h3>10+</h3>
+          <p>Années d'expérience</p>
+        </div>
+        <div class="stat">
+          <h3>500+</h3>
+          <p>Projets réalisés</p>
+        </div>
+        <div class="stat">
+          <h3>200+</h3>
+          <p>Clients satisfaits</p>
+        </div>
+        <div class="stat">
+          <h3>24/7</h3>
+          <p>Support technique</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center mb-4">Contactez-nous</h2>
-      <p class="text-center">📞 <a href="tel:+237652439276">+237 652 439 276</a> |  <a href="tel:+237657793159">+237 657 793 159</a> </p>
-      <p align="center">📧 <a href="mailto:w.scorporation237@gmail.com">w.scorporation237@gmail.com</a></p>
-    <p align="center"> <a href="https://wa.me/237652439276?text=Bonjour%2C%20je%20souhaite%20avoir%20plus%20d'informations" target="_blank">
-  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" style="vertical-align:middle;">
-  Écrivez-nous sur WhatsApp
-</a>
-</p>
+  
+  <!-- Section Expertise -->
+<section class="expertise">
+  <div class="container">
+    <div class="expertise-content">
+      
+      <!-- Texte à gauche -->
+      <div class="expertise-text">
+        <h2>Notre Expertise</h2>
+        <p>
+          Une maîtrise technique et comptable reconnue, forgée par des années d’expérience et une formation continue.
+        </p>
+        <p>
+          Notre équipe pluridisciplinaire vous garantit des solutions adaptées et performantes pour tous vos projets.
+        </p>
+
+        <!-- Liste compétences -->
+        <div class="skills">
+          <div class="skill">
+            <span>Développement Web</span>
+            <div class="progress"><div class="progress-bar" style="width:95%">95%</div></div>
+          </div>
+          <div class="skill">
+            <span>Comptabilité & Fiscalité</span>
+            <div class="progress"><div class="progress-bar" style="width:92%">92%</div></div>
+          </div>
+          <div class="skill">
+            <span>Infrastructure IT</span>
+            <div class="progress"><div class="progress-bar" style="width:88%">88%</div></div>
+          </div>
+          <div class="skill">
+            <span>Impact visuel</span>
+            <div class="progress"><div class="progress-bar" style="width:92%">92%</div></div>
+          </div>
+          <div class="skill">
+            <span>Conseil Financier</span>
+            <div class="progress"><div class="progress-bar" style="width:85%">85%</div></div>
+          </div>
+          <div class="skill">
+            <span>Sécurité Informatique</span>
+            <div class="progress"><div class="progress-bar" style="width:87%">87%</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image à droite -->
+      <div class="expertise-image">
+        <img src="https://revistabyte.es/wp-content/uploads/2021/11/oracle-servicios-de-ia-1024x661.png" alt="Expertise Informatique">
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Formulaire de Devis -->
-  <section id="devis" class="py-5 container">
-   <h4 class="mb-3">💬 Demande de devis / Quote Request</h4>
+<!-- CONTACTS -->
+  <section class="body2" id="contact">
+  <div class="contact-container">
+    <!-- Infos -->
+    <div class="contact-info">
+      <h2>Contactez-nous</h2>
+      <p>Prêt à transformer votre entreprise ? Discutons de vos besoins et trouvons ensemble les meilleures solutions.</p>
 
-        <form id="contactForm">
-          <div class="mb-3">
-            <label>Nom / Name</label>
-            <input type="text" name="nom" class="form-control" placeholder="Votre nom / Your name" required>
-          </div>
-          <div class="mb-3">
-            <label>Email</label>
-            <input type="email" name="email" class="form-control" placeholder="ex: exemple@gmail.com" required>
-          </div>
-          <div class="mb-3">
-        <label class="form-label">Service souhaité</label>
-        <select name="service" class="form-select">
-          <option>Création de site web</option>
-          <option>Création d'application</option>
-          <option>Maintenance</option>
-          <option>Expertise comptable</option>
+      <div class="info-item">
+        <div class="info-icon"><i class="fa-solid fa-headset"></i></div>
+        <div class="info-text">
+          <h4>Téléphone</h4>
+          <p>+237 652 43 92 76 <br>+237 657 79 31 59</p> 
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+        <div class="info-text">
+          <h4>Email</h4>
+          <p>wscorporation237@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+        <div class="info-text">
+          <h4>Adresse</h4>
+          <p>Douala, Cameroun</p>
+        </div>
+      </div>
+
+   <div class="info-item">
+        <div class="info-icon"><i class="fa-solid fa-calendar-days"></i></div>
+        <div class="info-text">
+          <h4>Horaires</h4>
+          <p>Lun–Ven:<br>8h00 – 18h00</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formulaire -->
+    <div class="contact-form">
+      <h3>Envoyez-nous un message  </h3>
+      <form id="contactform">
+        <div class="form-group">
+          <label>Nom complet</label>
+          <input type="text" name="nom" placeholder="Votre nom / Your name" required>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="ex: exemple@gmail.com" required>
+        </div>
+        
+        <div class="form-group">
+          <label>Service souhaité</label>
+          <select name="service">
+            <option value="">Sélectionnez un service</option>
+            <option>Développement web & mobile</option>
+          <option>Infrastructure réseau</option>
+          <option>Maintenance système</option>
+          <option>Sécurité informatique</option>
+          <option>Comptabilité général et analystique</option>
+          <option>Vielle Fiscale</option>
+          <option>Montage des business plan , DSF & ASF</option>
+          <option>Gestion financière</option>
+          <option>Création & Design Graphique</option>
           <option>Marketing digital</option>
-          <option>Montage graphique</option>
-        </select>
-      </div>
-          <div class="mb-3">
-            <label>Message</label>
-            <textarea name="message" class="form-control" rows="5" placeholder="Décrivez votre besoin / Describe your need" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-success w-100">✅ Envoyer / Send</button>
-        </form>
+          <option>Branding & Stratégie </option>
+          <option>Optimisation & Performance</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea name="message" maxlength="500" placeholder="Décrivez votre besoin / Describe your need..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Envoyer le message</button>
+      </form>
 
-        <div id="statusMessage" class="text-center mt-3"></div>
+      <div id="statusMessage" class="text-center mt-3"></div>
+    </div>
+  </div>
+</section>
+<section >
+<!-- FOOTER -->
+<footer class="footer" class="hero4">
+  <div class="footer-container">
+
+    <!-- Colonne logo + description -->
+    <div class="footer-col">
+      
+      <h2 class="footer-logo">W.S CORPORATION</h2>
+      <p>Votre partenaire de confiance pour la transformation digitale et la gestion comptable. 
+      Nous accompagnons votre entreprise vers l’excellence opérationnelle.</p>
+      <div class="social-icons">
+        <a href="https://wa.me/237652439276?text=Bonjour%2C%20je%20souhaite%20avoir%20plus%20d'informations"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/w.scorporation237?igsh=eGxneTFzYWk2bGF5"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/1DLFSCRiD3/"><i class="fab fa-facebook"></i></a>
       </div>
+    </div>
+
+    <!-- Colonne liens rapides -->
+    <div class="footer-col">
+      <h3>Liens Rapides</h3>
+      <ul>
+        <li><a href="#hero">Accueil</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Colonne services -->
+    <div class="footer-col">
+      <h3>Services</h3>
+      <ul>
+        <li><a href="#services">Solutions Informatiques</a></li>
+        <li><a href="#services">Services Comptables</a></li>
+        <li><a href="#services">Impact Visuel</a></li> 
+        <li><a href="#services">Conseil & Audit</a></li>
+      </ul>
     </div>
   </div>
 
-  </section>
+    
+ 
 
-  <!-- Pied de page -->
-  <footer class="bg-dark text-white text-center py-3">
-    &copy; 2025 W.S Corporation. Tous droits réservés.
-  </footer>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Tous droits réservés.</p>
+    <div class="footer-bottom-links">
+      <a href="#">Mentions légales</a>
+      <a href="#">Politique de confidentialité</a>
+      <span>Made with ❤️ by WS Corporation</span>
+    </div>
+  </div>
+</footer>
+
+</section>
+
+  <script>
+    
+
+     // Gestion du menu responsive
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.navbar ul');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 
   <script>
     emailjs.init("J2s66QEp50njy-Mos"); // Remplace par ton vrai USER ID
 
-    const form = document.getElementById("contactForm");
+    const form = document.getElementById("contactform");
     const status = document.getElementById("statusMessage");
 
     form.addEventListener("submit", function (e) {
@@ -130,6 +351,11 @@
     });
   </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- FontAwesome CDN pour les icônes -->
+<script src="https://kit.fontawesome.com/yourkey.js" crossorigin="anonymous"></script>
+
+
 </body>
 </html>
+
