@@ -1044,11 +1044,11 @@ button:hover {
       justify-content: center;
       align-items: center;
       z-index: 9999;
-      transition: opacity 8s ease, visibility 8s;
+      transition: opacity 16s ease, visibility 16s;
     }
 
     #loader h2 {
-      color: #0d1a42;
+      color: #f3f3f3;
       font-size: 22px;
       margin-top: 15px;
     }
@@ -1060,7 +1060,7 @@ button:hover {
       border-radius: 50%;
       width: 60px;
       height: 60px;
-      animation: spin 8s linear infinite;
+      animation: spin 16s linear infinite;
     }
 
     @keyframes spin {
