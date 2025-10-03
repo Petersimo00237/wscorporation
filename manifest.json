@@ -1,10 +1,10 @@
 {
   "name": "WS corporation",
-  "short_name": "WScorp",
+  "short_name": "WScorporation",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#0d6efd",
+  "background_color": "#0d1a42",
+  "theme_color": "#0d1a42",
   "orientation": "portrait",
   "icons": [
     {
@@ -13,7 +13,7 @@
       "type": "image/png"
     },
     {
-      "src": "icons/logows2.png",
+      "src": "icons/logows.png",
       "sizes": "512x512",
       "type": "image/png"
     }
