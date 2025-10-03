@@ -364,6 +364,23 @@
 <!-- FontAwesome CDN pour les icônes -->
 <script src="https://kit.fontawesome.com/yourkey.js" crossorigin="anonymous"></script>
 
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/sw.js").then(reg => {
+    reg.onupdatefound = () => {
+      const newWorker = reg.installing;
+      newWorker.onstatechange = () => {
+        if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
+          if (confirm("Une nouvelle version est disponible 🚀 Voulez-vous recharger ?")) {
+            window.location.reload();
+          }
+        }
+      };
+    };
+  });
+}
+</script>
+
 
 </body>
 </html>
