@@ -3,8 +3,8 @@
   "short_name": "WS-corporation",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#0d1a42",
-  "theme_color": "#0d1a42",
+  "background_color": "#1A2C4F",
+  "theme_color": "#1A2C4F",
   "orientation": "portrait",
   "icons": [
     {
@@ -13,7 +13,7 @@
       "type": "image/png"
     },
     {
-      "src": "icons/logows3.png",
+      "src": "icons/logows.png",
       "sizes": "512x512",
       "type": "image/png"
     }

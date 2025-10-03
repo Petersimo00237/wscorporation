@@ -1056,11 +1056,11 @@ button:hover {
     /* Animation cercle */
     .spinner {
       border: 6px solid #f3f3f3;
-      border-top: 6px solid #0d1a42;
+      border-top: 6px solid #1A2C4F;
       border-radius: 50%;
       width: 60px;
       height: 60px;
-      animation: spin 3s linear infinite;
+      animation: spin 6s linear infinite;
     }
 
     @keyframes spin {
