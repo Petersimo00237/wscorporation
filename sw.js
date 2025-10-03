@@ -17,7 +17,7 @@ self.addEventListener("fetch", (event) => {
 
 
 const CACHE_NAME = "wscorporation-v1"; // incrémente le numéro à chaque déploiement
-const urlsToCache = ["/", "/index.html", "/manifest.json", "/icons/logows3.png", "/icons/logows.png"];
+const urlsToCache = ["/", "/index.html", "/manifest.json", "/icons/logows.png", "/icons/logows2.png"];
 
 // Installation
 self.addEventListener("install", (event) => {
