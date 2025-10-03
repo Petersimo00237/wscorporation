@@ -1044,7 +1044,7 @@ button:hover {
       justify-content: center;
       align-items: center;
       z-index: 9999;
-      transition: opacity 20s ease, visibility 20s;
+      transition: opacity 21s ease, visibility 21s;
     }
 
     #loader h2 {
@@ -1053,11 +1053,7 @@ button:hover {
       margin-top: 15px;
     }
 
-    #loader img {
-  width: 120px;
-  height: auto;
-  animation: pulse 20s infinite;
-}
+    
 
     /* Animation cercle */
     .spinner {
@@ -1066,20 +1062,13 @@ button:hover {
       border-radius: 50%;
       width: 60px;
       height: 60px;
-      animation: spin 20s linear infinite;
+      animation: spin 21s linear infinite;
     }
 
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
-
-    /* Animation pulse */
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.1); opacity: 0.7; }
-  100% { transform: scale(1); opacity: 1; }
-}
 
     /* Contenu du site */
     #app {

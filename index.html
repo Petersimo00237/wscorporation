@@ -28,9 +28,7 @@
 <section class="body3">
   <!-- Écran Loader -->
   <div id="loader">
-    <div class="spinner">
-      <img src="icons/logows2.png" alt="loader..." />
-    </div>
+    <div class="spinner"></div>
     <h2>loader...</h2>
   </div>
 
@@ -333,7 +331,7 @@
     <div class="footer-bottom-links">
       <a href="#">Mentions légales</a>
       <a href="#">Politique de confidentialité</a>
-      <span>Made with by WS Corporation</span>
+      <span>Made with by WS-Corporation</span>
     </div>
   </div>
 </footer>
@@ -418,19 +416,7 @@ if ("serviceWorker" in navigator) {
         .catch(err => console.log("❌ Erreur SW :", err));
     }
 
-    window.addEventListener("load", () => {
-  const loader = document.getElementById("loader");
-  const content = document.getElementById("spinner");
-
-  loader.style.transition = "opacity 20s ease";
-  loader.style.opacity = "0";
-
-  setTimeout(() => {
-    loader.style.display = "none";
-    content.style.display = "block";
-  }, 1000); // disparition en fondu
-});
-
+    
   </script>
 
 
