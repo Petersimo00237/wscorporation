@@ -24,6 +24,23 @@
 
 </head>
 <body>
+<section class="body3">
+  <!-- Écran Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+    <h2>Chargement...</h2>
+  </div>
+
+  <!-- Contenu de l'application -->
+  <div id="app">
+    <h1>Bienvenue dans l'espace WS-corporation.</h1>
+    <p>Contenu chargé avec succès !</p>
+    <button onclick="alert('Merci d’utiliser mon app !')">Cliquer</button>
+  </div>
+
+ 
+</section>
+
 <!-- NAVBAR -->
 <nav class="navbar">
     <div class="logo"> <br> </div>
@@ -380,6 +397,30 @@ if ("serviceWorker" in navigator) {
   });
 }
 </script>
+
+ <script>
+    // Simulation de chargement : attendre que le site soit prêt
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+      const app = document.getElementById("app");
+
+      loader.style.opacity = "0";
+      loader.style.visibility = "hidden";
+
+      setTimeout(() => {
+        loader.style.display = "none";
+        app.style.display = "block";
+        document.body.style.overflow = "auto"; // réactive le scroll
+      }, 800);
+    });
+
+    // Enregistrer le service worker
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js")
+        .then(() => console.log("✅ Service Worker enregistré"))
+        .catch(err => console.log("❌ Erreur SW :", err));
+    }
+  </script>
 
 
 </body>
