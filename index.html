@@ -4,7 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
  
+ <meta name="description" content="PWA installable sur Android et iOS avec loader animé.">
 
+  <!-- Couleur du thème / splash Android + iOS -->
+  <meta name="theme-color" content="#0d6efd">
+
+  
+  <!-- iOS Web App (Safari) -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="WS-Corporation">
+
+  <!-- Icônes iOS -->
+  <link rel="apple-touch-icon" href="icons/logows2.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="icons/logows.png">
+
+  <!-- Favicon classique -->
+  <link rel="icon" type="image/png" href="icons/logows2.png">
   
 
 
@@ -32,10 +48,10 @@
 </head>
 <body>
 <section class="body3">
-  <!-- Écran Loader -->
+  
+  <!-- Loader -->
   <div id="loader">
-    <div class="spinner"></div>
-    <h2>loader...</h2>
+    <img src="icons/logows2.png" alt="Chargement...">
   </div>
 
   
@@ -354,6 +370,26 @@
     toggle.addEventListener('click', () => {
       menu.classList.toggle('active');
     });
+
+
+     // Masquer le loader après le chargement complet
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+      const content = document.getElementById("content");
+
+      loader.style.opacity = "0"; // fondu
+      setTimeout(() => {
+        loader.style.display = "none";
+        content.style.display = "block";
+      }, 1000); // durée correspond à transition
+    });
+
+    // Service Worker PWA
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js")
+        .then(() => console.log("Service Worker enregistré ✅"))
+        .catch(err => console.log("Erreur SW:", err));
+    }
   </script>
 
   <script>
@@ -428,4 +464,3 @@ if ("serviceWorker" in navigator) {
 
 </body>
 </html>
-
