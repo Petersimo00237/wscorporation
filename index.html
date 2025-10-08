@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
  
+<meta name="theme-color" content="#0056ff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="icons/logows2.png">
+
 
   
 
@@ -54,6 +59,7 @@
       </li>
       <li><a href="#apropos"><i class="fa-solid fa-circle-info"></i>&nbsp; À propos</a></li>
       <li><a href="#contact"><i class="fa-solid fa-headset"></i>&nbsp;  Contact</a></li>
+      <li><a href="chatp.html"><i class="fa-solid fa-headset"></i>&nbsp;  Assistance-client</a></li>
      
     </ul>
   </nav>
@@ -67,7 +73,7 @@
       <p>Votre partenaire de confiance pour la transformation digitale et la gestion comptable de votre entreprise</p>
       <div class="buttons">
         <a href="#services" class="btn btn-primary">Découvrir nos services</a>
-        <a href="#apropos" class="btn btn-outline">À propos de nous</a>
+        <a href="chatp.html" class="btn btn-outline">À propos de nous</a>
       </div>
     </div>
   </section>
@@ -96,7 +102,7 @@
         <p>Gestion comptable complète, déclarations fiscales et conseil financier pour accompagner la croissance de votre entreprise.</p>
         <ul>
           <li>Comptabilité général et analystique</li>
-          <li>Vielle Fiscale</li>
+          <li>Vielle Fiscale</li>Comptabilité général et analystique
           <li>Montage des business plan , DSF & ASF</li>
           <li>Gestion financière</li>
         </ul>
@@ -424,6 +430,29 @@ if ("serviceWorker" in navigator) {
 
     
   </script>
+
+<!-- OneSignal Web Push -->
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "TON_APP_ID_ONESIGNAL", // 🔹 remplace par ton ID
+      safari_web_id: "TON_SAFARI_WEB_ID", // facultatif (pour iOS Safari)
+      notifyButton: {
+        enable: true,
+      },
+      promptOptions: {
+        slidedown: {
+          enabled: true,
+          actionMessage: "Souhaitez-vous recevoir nos notifications ?",
+          acceptButtonText: "Oui",
+          cancelButtonText: "Non"
+        }
+      }
+    });
+  });
+</script>
 
 
 </body>

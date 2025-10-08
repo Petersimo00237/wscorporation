@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assistance Client - W.S Corporation</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #feffff, #e3e7ee, #edfffe);
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      color: #fff;
+    }
+
+    header {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .back-btn {
+      
+      color: #00c853;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+      
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+
+    }
+
+    .back-btn:hover {
+      background: linear-gradient(135deg, #0f172a, #1e293b, #0f766e);
+      color:  #00c853;
+    }
+
+    .timezone {
+      font-size: 13px;
+      color:  #000000;
+      text-align: center;
+      margin-top: 10px;
+      opacity: 0.9;
+    }
+
+    .chat-container {
+      width: 95%;
+      max-width: 420px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 70vh;
+      margin-top: 20px;
+    }
+
+    .chat-header {
+      background: linear-gradient(135deg, #0f172a, #1e293b, #0f766e);
+      color: #fff;
+      padding: 12px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .chat-box {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      max-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      background: #f7f7f7;
+    }
+
+    .chat-input-area {
+      display: flex;
+      border-top: 1px solid #ddd;
+    }
+
+    #user-input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      outline: none;
+      font-size: 15px;
+    }
+
+    #send-btn {
+     background: linear-gradient(135deg, #0f172a, #1e293b, #0f766e);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    .bot-message, .user-message {
+      padding: 8px 12px;
+      border-radius: 8px;
+      margin: 6px 0;
+      max-width: 80%;
+      line-height: 1.4em;
+      word-wrap: break-word;
+    }
+
+    .bot-message {
+      background: #e9e9e9;
+      align-self: flex-start;
+      color: #000;
+    }
+
+    .user-message {
+      background: #00c853;
+      color: white;
+      align-self: flex-end;
+    }
+
+    footer {
+      color: #00c853;
+      margin-top: 15px;
+      font-size: 13px;
+      opacity: 0.8;
+    }
+
+    :root {
+      --color-primary:  #0a192f;   /* Couleur principale */
+      --color-secondary: #00c853; /* Accent */
+      --color-light: #ffffff;
+      --color-dark: #1a252f;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+    }
+
+    /* --- Navbar --- */
+    header {
+      background-color: var(--color-primary);
+      color: var(--color-light);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      background-image: url("logows.png");
+  background-repeat: no-repeat;
+  background-position: center center; /* logo à gauche */
+  background-size: 120px; /* taille du logo */
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    
+    
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html"><button class="back-btn" onclick="goBack()">⬅ </button></a>
+   
+    
+
+    <div class="logo"> <br> </div>
+     
+
+  </nav>
+  </header>
+ <h1>Assistance Client</h1>
+  <div class="timezone" id="timezone"></div>
+
+  <div class="chat-container">
+    <div class="chat-header">💬 Chat W.S Corporation</div>
+
+    <div class="chat-box" id="chat-box">
+      <div class="bot-message">
+        Bonjour 👋 Je suis votre assistant virtuel W.S Corporation.<br>
+        Comment puis-je vous aider aujourd’hui ?
+      </div>
+    </div>
+
+    <div class="chat-input-area">
+      <input type="text" id="user-input" placeholder="Écrivez votre question..." />
+      <button id="send-btn">Envoyer</button>
+    </div>
+  </div>
+
+ 
+
+  <footer>© 2025 W.S Corporation</footer>
+
+  <script>
+    // --- Fonctions du chat ---
+    const responses = {
+      "bonjour": "Bonjour 👋 Comment puis-je vous aider aujourd'hui ?",
+      "bonsoir": "Bonsoir 👋 Comment puis-je vous aider aujourd'hui ?",
+      "Montage des business plan , DSF & ASF" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
+      "Comptabilité général et analystique" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
+      "Vielle Fiscale" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
+      "Gestion financière" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
+      "Création & Design Graphique" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
+      "Marketing digital" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
+      "Publicité ads" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
+      "Optimisation & Performance" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
+      "site web": "Pour créer un site web, rendez-vous dans la section 'Demander un devis' sur la page d’accueil.",
+      "application": "Nous créons des applications Android et iOS. Souhaitez-vous  demander un devis ?",
+      "prix": "Nos tarifs dépendent du type de projet. Décrivez votre besoin et je vous ferai une estimation gratuite 💰",
+      "contact": "Contactez-nous à w.scorporation237@gmail.com ou via WhatsApp au +237 6-57-79-31-59" ,
+      "formation": "Nous proposons pas des formations chez nos partenaires . Souhaitez-vous voir le programme?",
+      "merci": "Avec plaisir 😊 Je reste à votre disposit on si vous avez d’autres questions."
+    };
+
+    const defaultResponse = "Je n’ai pas bien compris 🤔 Pouvez-vous reformuler ou préciser votre demande ?";
+
+    document.getElementById("send-btn").addEventListener("click", sendMessage);
+    document.getElementById("user-input").addEventListener("keypress", e => {
+      if (e.key === "Enter") sendMessage();
+    });
+
+    function sendMessage() {
+      const input = document.getElementById("user-input");
+      const message = input.value.trim();
+      if (message === "") return;
+
+      appendMessage("user", message);
+      input.value = "";
+
+      setTimeout(() => {
+        const reply = getBotResponse(message);
+        appendMessage("bot", reply);
+      }, 500);
+    }
+
+    function appendMessage(sender, text) {
+      const chatBox = document.getElementById("chat-box");
+      const msg = document.createElement("div");
+      msg.className = sender === "user" ? "user-message" : "bot-message";
+      msg.innerText = text;
+      chatBox.appendChild(msg);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    function getBotResponse(input) {
+      input = input.toLowerCase();
+      for (let key in responses) {
+        if (input.includes(key)) return responses[key];
+      }
+      return defaultResponse;
+    }
+
+    // --- Bouton retour ---
+    function goBack() {
+      window.history.back();
+    }
+
+    // --- Fuseau horaire automatique ---
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    document.getElementById("timezone").innerText = "🕒 Fuseau horaire actuel : " + timezone;
+  </script>
+</body>
+</html>
+
