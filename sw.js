@@ -51,3 +51,23 @@ self.addEventListener("fetch", (event) => {
 self.addEventListener("install", (event) => {
   self.skipWaiting(); // ⚡ force le nouveau SW à prendre le relais immédiatement
 });
+
+self.addEventListener("install", e => {
+  e.waitUntil(
+    caches.open("ws-cache").then(cache => {
+      return cache.addAll([
+        "/",
+        "/index.html",
+        "/icons/logows2.png",
+        "/icons/logows.png",
+        "/manifest.json"
+      ]);
+    })
+  );
+});
+
+self.addEventListener("fetch", e => {
+  e.respondWith(
+    caches.match(e.request).then(response => response || fetch(e.request))
+  );
+});
