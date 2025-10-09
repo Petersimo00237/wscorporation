@@ -229,75 +229,7 @@
   <footer>© 2025 W.S Corporation</footer>
 
   <script>
-    // --- Fonctions du chat ---
-    const responses = {
-      "bonjour": "Bonjour 👋 Comment puis-je vous aider aujourd'hui ?",
-      "bonsoir": "Bonsoir 👋 Comment puis-je vous aider aujourd'hui ?",
-      "services": "Nous proposons une gamme complète de services professionnels pour accompagner votre entreprise dans son développement:Solutions Informatiques(Développement web & mobile,Infrastructure réseau,Maintenance système,Sécurité informatique) ; Services Comptables(Comptabilité général et analystique,Vielle Fiscale,Montage des business plan , DSF & ASF,Gestion financière); Impact Visuel(Création & Design Graphique,Création & Design Graphique,Branding & Stratégie,Optimisation & Performance)", 
-      "service": "Nous proposons une gamme complète de services professionnels pour accompagner votre entreprise dans son développement:Solutions Informatiques(Développement web & mobile,Infrastructure réseau,Maintenance système,Sécurité informatique) ; Services Comptables(Comptabilité général et analystique,Vielle Fiscale,Montage des business plan , DSF & ASF,Gestion financière); Impact Visuel(Création & Design Graphique,Création & Design Graphique,Branding & Stratégie,Optimisation & Performance)", 
-      "asf" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
-      "comptabilité " : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
-      "vielle Fiscale" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
-      "gestion financière" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
-      " design " : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
-      "Marketing digital" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
-      "publicité ads" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
-      "devis" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
-      "site web": "Pour créer un site web, rendez-vous dans la section 'Demander un devis' sur la page d’accueil.",
-      "application": "Nous créons des applications Android et iOS. Souhaitez-vous  demander un devis ?",
-      "prix": "Nos tarifs dépendent du type de projet. Décrivez votre besoin et je vous ferai une estimation gratuite 💰",
-      "contact": "Contactez-nous à w.scorporation237@gmail.com ou via WhatsApp au +237 6-57-79-31-59" ,
-      "formation": "Nous proposons pas des formations chez nos partenaires . Souhaitez-vous voir le programme?",
-      "merci": "Avec plaisir 😊 Je reste à votre disposition si vous avez d’autres questions."
-    };
-
-    const defaultResponse = "Je n’ai pas bien compris 🤔 Pouvez-vous reformuler ou préciser votre demande ?";
-
-    document.getElementById("send-btn").addEventListener("click", sendMessage);
-    document.getElementById("user-input").addEventListener("keypress", e => {
-      if (e.key === "Enter") sendMessage();
-    });
-
-    function sendMessage() {
-      const input = document.getElementById("user-input");
-      const message = input.value.trim();
-      if (message === "") return;
-
-      appendMessage("user", message);
-      input.value = "";
-
-      setTimeout(() => {
-        const reply = getBotResponse(message);
-        appendMessage("bot", reply);
-      }, 500);
-    }
-
-    function appendMessage(sender, text) {
-      const chatBox = document.getElementById("chat-box");
-      const msg = document.createElement("div");
-      msg.className = sender === "user" ? "user-message" : "bot-message";
-      msg.innerText = text;
-      chatBox.appendChild(msg);
-      chatBox.scrollTop = chatBox.scrollHeight;
-    }
-
-    function getBotResponse(input) {
-      input = input.toLowerCase();
-      for (let key in responses) {
-        if (input.includes(key)) return responses[key];
-      }
-      return defaultResponse;
-    }
-
-    // --- Bouton retour ---
-    function goBack() {
-      window.history.back();
-    }
-
-    // --- Fuseau horaire automatique ---
-    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    document.getElementById("timezone").innerText = " Fuseau horaire actuel : " + timezone;
-
+   const _0x1ef0e9=_0x501b;(function(_0x4c0b5a,_0x40e31e){const _0x36f7bf=_0x501b,_0x54db45=_0x4c0b5a();while(!![]){try{const _0x2dfe66=-parseInt(_0x36f7bf(0x1a9))/0x1+parseInt(_0x36f7bf(0x18f))/0x2*(parseInt(_0x36f7bf(0x1aa))/0x3)+-parseInt(_0x36f7bf(0x19f))/0x4*(-parseInt(_0x36f7bf(0x191))/0x5)+parseInt(_0x36f7bf(0x1b3))/0x6*(-parseInt(_0x36f7bf(0x1b4))/0x7)+-parseInt(_0x36f7bf(0x19b))/0x8*(parseInt(_0x36f7bf(0x1a3))/0x9)+parseInt(_0x36f7bf(0x1ac))/0xa*(-parseInt(_0x36f7bf(0x194))/0xb)+parseInt(_0x36f7bf(0x1b2))/0xc;if(_0x2dfe66===_0x40e31e)break;else _0x54db45['push'](_0x54db45['shift']());}catch(_0x30bd27){_0x54db45['push'](_0x54db45['shift']());}}}(_0x2e98,0xc2afc));function _0x2e98(){const _0x32b044=['className','user-message','scrollTop','21383928tdMSgV','4269822GvgsiT','7JgRunr','innerText','createElement','history','Contactez-nous\x20à\x20w.scorporation237@gmail.com\x20ou\x20via\x20WhatsApp\x20au\x20+237\x206-57-79-31-59','228166zGCoyq','addEventListener','5SCenfg','resolvedOptions','user','143KhRljt','bot','Nous\x20créons\x20des\x20applications\x20Android\x20et\x20iOS.\x20Souhaitez-vous\x20\x20demander\x20un\x20devis\x20?','key','DateTimeFormat','scrollHeight','Bonjour\x20👋\x20Comment\x20puis-je\x20vous\x20aider\x20aujourd\x27hui\x20?','66072GHGIGz','getElementById','user-input','includes','5016612qDJpTT','Pour\x20plus\x20d\x27informations,\x20rendez-vous\x20dans\x20la\x20section\x20\x27Demander\x20un\x20devis\x27\x20sur\x20la\x20page\x20d’accueil','value','Bonsoir\x20👋\x20Comment\x20puis-je\x20vous\x20aider\x20aujourd\x27hui\x20?','747ehrPWF','Avec\x20plaisir\x20😊\x20Je\x20reste\x20à\x20votre\x20disposition\x20si\x20vous\x20avez\x20d’autres\x20questions.','div','timeZone','keypress','Enter','1100615uBVRLG','39UbLrca','Nous\x20proposons\x20pas\x20des\x20formations\x20chez\x20nos\x20partenaires\x20.\x20Souhaitez-vous\x20voir\x20le\x20programme?','941570pLwfxG','Je\x20n’ai\x20pas\x20bien\x20compris\x20🤔\x20Pouvez-vous\x20reformuler\x20ou\x20préciser\x20votre\x20demande\x20?','bot-message'];_0x2e98=function(){return _0x32b044;};return _0x2e98();}const responses={'bonjour':_0x1ef0e9(0x19a),'bonsoir':_0x1ef0e9(0x1a2),'services':'Nous\x20proposons\x20une\x20gamme\x20complète\x20de\x20services\x20professionnels\x20pour\x20accompagner\x20votre\x20entreprise\x20dans\x20son\x20développement:Solutions\x20Informatiques(Développement\x20web\x20&\x20mobile,Infrastructure\x20réseau,Maintenance\x20système,Sécurité\x20informatique)\x20;\x20Services\x20Comptables(Comptabilité\x20général\x20et\x20analystique,Vielle\x20Fiscale,Montage\x20des\x20business\x20plan\x20,\x20DSF\x20&\x20ASF,Gestion\x20financière);\x20Impact\x20Visuel(Création\x20&\x20Design\x20Graphique,Création\x20&\x20Design\x20Graphique,Branding\x20&\x20Stratégie,Optimisation\x20&\x20Performance)','service':'Nous\x20proposons\x20une\x20gamme\x20complète\x20de\x20services\x20professionnels\x20pour\x20accompagner\x20votre\x20entreprise\x20dans\x20son\x20développement:Solutions\x20Informatiques(Développement\x20web\x20&\x20mobile,Infrastructure\x20réseau,Maintenance\x20système,Sécurité\x20informatique)\x20;\x20Services\x20Comptables(Comptabilité\x20général\x20et\x20analystique,Vielle\x20Fiscale,Montage\x20des\x20business\x20plan\x20,\x20DSF\x20&\x20ASF,Gestion\x20financière);\x20Impact\x20Visuel(Création\x20&\x20Design\x20Graphique,Création\x20&\x20Design\x20Graphique,Branding\x20&\x20Stratégie,Optimisation\x20&\x20Performance)','asf':'Pour\x20plus\x20d\x27informations,\x20rendez-vous\x20dans\x20la\x20section\x20\x27Demander\x20un\x20devis\x27\x20sur\x20la\x20page\x20d’accueil','comptabilité\x20':'Pour\x20plus\x20d\x27informations,\x20rendez-vous\x20dans\x20la\x20section\x20\x27Demander\x20un\x20devis\x27\x20sur\x20la\x20page\x20d’accueil','vielle\x20Fiscale':'Pour\x20plus\x20d\x27informations,\x20rendez-vous\x20dans\x20la\x20section\x20\x27Demander\x20un\x20devis\x27\x20sur\x20la\x20page\x20d’accueil','gestion\x20financière':_0x1ef0e9(0x1a0),'\x20design\x20':_0x1ef0e9(0x1a0),'Marketing\x20digital':'Pour\x20plus\x20d\x27informations,\x20rendez-vous\x20dans\x20la\x20section\x20\x27Demander\x20un\x20devis\x27\x20sur\x20la\x20page\x20d’accueil','publicité\x20ads':_0x1ef0e9(0x1a0),'devis':'Pour\x20plus\x20d\x27informations,\x20rendez-vous\x20dans\x20la\x20section\x20\x27Demander\x20un\x20devis\x27\x20sur\x20la\x20page\x20d’accueil','site\x20web':'Pour\x20créer\x20un\x20site\x20web,\x20rendez-vous\x20dans\x20la\x20section\x20\x27Demander\x20un\x20devis\x27\x20sur\x20la\x20page\x20d’accueil.','application':_0x1ef0e9(0x196),'prix':'Nos\x20tarifs\x20dépendent\x20du\x20type\x20de\x20projet.\x20Décrivez\x20votre\x20besoin\x20et\x20je\x20vous\x20ferai\x20une\x20estimation\x20gratuite\x20💰','contact':_0x1ef0e9(0x18e),'formation':_0x1ef0e9(0x1ab),'merci':_0x1ef0e9(0x1a4)},defaultResponse=_0x1ef0e9(0x1ad);document[_0x1ef0e9(0x19c)]('send-btn')[_0x1ef0e9(0x190)]('click',sendMessage),document[_0x1ef0e9(0x19c)](_0x1ef0e9(0x19d))['addEventListener'](_0x1ef0e9(0x1a7),_0x1bd3f0=>{const _0x1a6c0f=_0x1ef0e9;if(_0x1bd3f0[_0x1a6c0f(0x197)]===_0x1a6c0f(0x1a8))sendMessage();});function sendMessage(){const _0x1b61cf=_0x1ef0e9,_0x1be76d=document[_0x1b61cf(0x19c)](_0x1b61cf(0x19d)),_0x17447c=_0x1be76d[_0x1b61cf(0x1a1)]['trim']();if(_0x17447c==='')return;appendMessage(_0x1b61cf(0x193),_0x17447c),_0x1be76d[_0x1b61cf(0x1a1)]='',setTimeout(()=>{const _0x352ed6=_0x1b61cf,_0x1b202b=getBotResponse(_0x17447c);appendMessage(_0x352ed6(0x195),_0x1b202b);},0x1f4);}function appendMessage(_0x14d903,_0x2383cc){const _0x3f92bf=_0x1ef0e9,_0x32671b=document['getElementById']('chat-box'),_0x36f86d=document[_0x3f92bf(0x18c)](_0x3f92bf(0x1a5));_0x36f86d[_0x3f92bf(0x1af)]=_0x14d903===_0x3f92bf(0x193)?_0x3f92bf(0x1b0):_0x3f92bf(0x1ae),_0x36f86d[_0x3f92bf(0x18b)]=_0x2383cc,_0x32671b['appendChild'](_0x36f86d),_0x32671b[_0x3f92bf(0x1b1)]=_0x32671b[_0x3f92bf(0x199)];}function getBotResponse(_0x5357f7){const _0x1f43da=_0x1ef0e9;_0x5357f7=_0x5357f7['toLowerCase']();for(let _0x58ac8f in responses){if(_0x5357f7[_0x1f43da(0x19e)](_0x58ac8f))return responses[_0x58ac8f];}return defaultResponse;}function _0x501b(_0x5ee7e4,_0x31aa40){const _0x2e9893=_0x2e98();return _0x501b=function(_0x501bb5,_0xa04b99){_0x501bb5=_0x501bb5-0x18b;let _0x57a4a5=_0x2e9893[_0x501bb5];return _0x57a4a5;},_0x501b(_0x5ee7e4,_0x31aa40);}function goBack(){const _0x5383eb=_0x1ef0e9;window[_0x5383eb(0x18d)]['back']();}const timezone=Intl[_0x1ef0e9(0x198)]()[_0x1ef0e9(0x192)]()[_0x1ef0e9(0x1a6)];document[_0x1ef0e9(0x19c)]('timezone')[_0x1ef0e9(0x18b)]='\x20Fuseau\x20horaire\x20actuel\x20:\x20'+timezone;
   </script>
   
 </body>
