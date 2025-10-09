@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+ 
   -webkit-tap-highlight-color: transparent;
   font-family: "Segoe UI", sans-serif;
 }
@@ -16,10 +16,40 @@ html, body {
     background: #f8f9fa;
       color: #333;
       line-height: 1.6;
+       width: 100%;
+        box-sizing: border-box;
+  min-height: 100vh;
+  overflow-x: hidden; /* évite les scrolls horizontaux */
   -webkit-text-size-adjust: 100%; /* Empêche le zoom automatique sur iOS */
 }
 /* RESET */
-    
+   
+/* Application uniforme du box-sizing */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
+/* ===== RESPONSIVE ADAPTATION ===== */
+@media (max-width: 992px) {
+  section  {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.4rem; }
+  p { font-size: 1rem; }
+  .col { flex: 1 1 100%; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.5rem; }
+  p { font-size: 0.95rem; }
+  .container { padding: 0 10px; }
+}
+
 
    
  .right{width:420px;height:260px;border-radius:12px;overflow:hidden;flex-shrink:0}
