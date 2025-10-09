@@ -202,13 +202,14 @@
     <div class="logo"> <br> </div>
      
 
-  </nav>
+  
   </header>
  <h1>Assistance Client</h1>
+ <br>
   <div class="timezone" id="timezone"></div>
 
   <div class="chat-container">
-    <div class="chat-header">💬 Chat W.S Corporation</div>
+    <div class="chat-header"><i class="fa-solid fa-comment"></i> Chat W.S Corporation</div>
 
     <div class="chat-box" id="chat-box">
       <div class="bot-message">
@@ -232,20 +233,22 @@
     const responses = {
       "bonjour": "Bonjour 👋 Comment puis-je vous aider aujourd'hui ?",
       "bonsoir": "Bonsoir 👋 Comment puis-je vous aider aujourd'hui ?",
-      "Montage des business plan , DSF & ASF" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
-      "Comptabilité général et analystique" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
-      "Vielle Fiscale" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
-      "Gestion financière" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
-      "Création & Design Graphique" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
+      "services": "Nous proposons une gamme complète de services professionnels pour accompagner votre entreprise dans son développement:Solutions Informatiques(Développement web & mobile,Infrastructure réseau,Maintenance système,Sécurité informatique) ; Services Comptables(Comptabilité général et analystique,Vielle Fiscale,Montage des business plan , DSF & ASF,Gestion financière); Impact Visuel(Création & Design Graphique,Création & Design Graphique,Branding & Stratégie,Optimisation & Performance)", 
+      "service": "Nous proposons une gamme complète de services professionnels pour accompagner votre entreprise dans son développement:Solutions Informatiques(Développement web & mobile,Infrastructure réseau,Maintenance système,Sécurité informatique) ; Services Comptables(Comptabilité général et analystique,Vielle Fiscale,Montage des business plan , DSF & ASF,Gestion financière); Impact Visuel(Création & Design Graphique,Création & Design Graphique,Branding & Stratégie,Optimisation & Performance)", 
+      "asf" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
+      "comptabilité " : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
+      "vielle Fiscale" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
+      "gestion financière" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
+      " design " : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
       "Marketing digital" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
-      "Publicité ads" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
-      "Optimisation & Performance" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
+      "publicité ads" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
+      "devis" : "Pour plus d'informations, rendez-vous dans la section 'Demander un devis' sur la page d’accueil",
       "site web": "Pour créer un site web, rendez-vous dans la section 'Demander un devis' sur la page d’accueil.",
       "application": "Nous créons des applications Android et iOS. Souhaitez-vous  demander un devis ?",
       "prix": "Nos tarifs dépendent du type de projet. Décrivez votre besoin et je vous ferai une estimation gratuite 💰",
       "contact": "Contactez-nous à w.scorporation237@gmail.com ou via WhatsApp au +237 6-57-79-31-59" ,
       "formation": "Nous proposons pas des formations chez nos partenaires . Souhaitez-vous voir le programme?",
-      "merci": "Avec plaisir 😊 Je reste à votre disposit on si vous avez d’autres questions."
+      "merci": "Avec plaisir 😊 Je reste à votre disposition si vous avez d’autres questions."
     };
 
     const defaultResponse = "Je n’ai pas bien compris 🤔 Pouvez-vous reformuler ou préciser votre demande ?";
@@ -293,8 +296,10 @@
 
     // --- Fuseau horaire automatique ---
     const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    document.getElementById("timezone").innerText = "🕒 Fuseau horaire actuel : " + timezone;
+    document.getElementById("timezone").innerText = " Fuseau horaire actuel : " + timezone;
+
   </script>
+  
 </body>
 </html>
 
