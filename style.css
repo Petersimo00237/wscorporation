@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
   -webkit-tap-highlight-color: transparent;
 }
 /* Empêche iOS de zoomer sur les champs de formulaire */
@@ -10,7 +9,7 @@ input, textarea, select, button {
   font-size: 16px !important;
 }
 
-body {
+html, body {
   scroll-behavior: smooth;
    touch-action: manipulation;
   -webkit-text-size-adjust: 100%; /* Empêche le zoom automatique sur iOS */
