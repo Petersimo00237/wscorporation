@@ -246,8 +246,13 @@ html, body {
     }
 
     .card ul li::before {
-      content: "✔";
       position: absolute;
+      left: 0;
+      color: #2ecc71;
+      font-size: 0.9rem;
+    }
+    .numerotation{
+       position: absolute;
       left: 0;
       color: #2ecc71;
       font-size: 0.9rem;
