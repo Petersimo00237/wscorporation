@@ -93,6 +93,7 @@ html, body {
   }
 }
 
+
     /* SECTION HERO */
     .hero {
       position: relative;
@@ -611,6 +612,7 @@ li{
       margin: 0;
       font-family: "Segoe UI", Tahoma, sans-serif;
     }
+    /* Barre supérieure colorée visible sur iOS */
 
     /* --- Navbar --- */
     .navbar {
