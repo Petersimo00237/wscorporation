@@ -99,7 +99,7 @@ html, body {
       position: relative;
       height: 100vh;
       width: 100%;
-      background: url('https://www.vitadaimprenditore.it/wp-content/uploads/2020/10/d6f224fb534a83b00aac145bc92cdd0f_L.jpg') no-repeat center center/cover;
+      background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -129,7 +129,7 @@ html, body {
     }
 
     .hero h1 span {
-      color: #c72eccff;
+      color: #2ecc71;
     }
 
     .hero p {
@@ -156,13 +156,13 @@ html, body {
     }
 
     .btn-primary {
-      background: #c72eccff;
+      background: #2ecc71;
       border: none;
       color: white;
     }
 
     .btn-primary:hover {
-      background: #c72eccff;
+      background: #27ae60;
     }
 
     .btn-outline {
@@ -225,7 +225,7 @@ html, body {
       background: #eafaf1;
       padding: 12px;
       border-radius: 50%;
-      color: #c72eccff;
+      color: #2ecc71;
       text-align: center;
     }
 
@@ -257,13 +257,13 @@ html, body {
       content: "";
       position: absolute;
       left: 0;
-      color: #c72eccff;
+      color: #2ecc71;
       font-size: 0.9rem;
     }
     .numerotation{
       position: absolute;
       left: 0;
-      color: #c72eccff;
+      color: #2ecc71;
       font-size: 0.9rem;
     }
 
@@ -318,7 +318,7 @@ html, body {
 
     .stat h3 {
       font-size: 1.8rem;
-      color: #c72eccff;
+      color: #2ecc71;
       margin-bottom: 5px;
     }
 
@@ -368,7 +368,7 @@ html, body {
     }
 
     .info-icon {
-      background: #c72eccff;
+      background: #22c55e;
       color: white;
       width: 45px;
       height: 45px;
@@ -435,7 +435,7 @@ html, body {
     }
 
     .btn-submit {
-      background: #c72eccff;
+      background: #22c55e;
       color: white;
       border: none;
       padding: 14px;
@@ -480,7 +480,7 @@ html, body {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 15px;
-  color: #c72eccff; /* Vert pro */
+  color: #00c853; /* Vert pro */
 }
 
 .footer-col p {
@@ -492,7 +492,7 @@ html, body {
 .footer-col h3 {
   font-size: 16px;
   margin-bottom: 12px;
-  color: #c72eccff;
+  color: #00c853;
 }
 
 .footer-col ul {
@@ -511,14 +511,14 @@ html, body {
 }
 
 .footer-col ul li a:hover {
-  color: #c72eccff;
+  color: #00c853;
 }
 
 .social-icons a {
   display: inline-block;
   margin-right: 10px;
   color: #fff;
-  background:#c72eccff;
+  background: #00c853;
   padding: 10px;
   border-radius: 50%;
   transition: 0.3s;
@@ -526,7 +526,7 @@ html, body {
 
 .social-icons a:hover {
   background: #fff;
-  color: #c72eccff;
+  color: #00c853;
 }
 
 .footer-bottom {
@@ -563,11 +563,11 @@ html, body {
 .navbar {
   display: flex;
   align-items: center;
-  background: #ffffffff;
+  background: #0a192f;
   padding: 15px 30px;
 }
 nav{
-   background: #ffffffff;
+   background: #0a192f;
 }
 li{
   color: white;
@@ -602,7 +602,7 @@ li{
 }
 
     :root {
-      --color-primary:  #ffffffff;   /* Couleur principale */
+      --color-primary:  #0a192f;   /* Couleur principale */
       --color-secondary: #00c853; /* Accent */
       --color-light: #ffffff;
       --color-dark: #1a252f;
